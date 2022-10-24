@@ -9,7 +9,7 @@ const main = document.querySelector('.header_p');
   
       main.style.display = 'block';
       setTimeout(() => main.style.opacity = 1, 100);
-    }, 1000);
+    }, 4000);
   }
   
   init();
