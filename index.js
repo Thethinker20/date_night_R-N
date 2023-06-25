@@ -7,6 +7,8 @@ const https = require("https");
 const path = require("path");
 const bodyParser = require("body-parser");
 
+require('dotenv').config();
+
 const app = express();
 app.set("views", path.join(__dirname, "views"));
 
