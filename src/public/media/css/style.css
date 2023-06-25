@@ -7,8 +7,8 @@
 	font-family: 'Montserrat';
 }
 
-body{
-	background: #ffb703;
+body {
+	background: #000000;
 }
 
 .container {
@@ -106,11 +106,14 @@ body{
 
 .main_page {
 	width: 100%;
-	height: 736px;
+	height: 100vh;
+	background: url(/media/photo/elemental_2.jpg);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center;
+	background-size: cover;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	animation: fade_in 2s ease-in;
 	display: none;
 }
@@ -140,24 +143,23 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    color: white;
+	color: white;
 	text-align: center;
 }
 
-.main_page .text2 p{
+.main_page .text2 p {
 	color: white;
-    margin-left: 45px;
-    font-weight: 600;
-    line-height: 24px;
+	margin-left: 45px;
+	font-weight: 600;
+	line-height: 24px;
 }
 
 .chp {
-    position: relative;
-    height: 200px;
-    top: -105px;
-    padding-left: 190px;
-	
-	animation: shake 5s infinite;
+	height: 80px;
+	/* top: -105px;
+	padding-left: 190px; */
+	transform: translateY(-25px);
+	animation: zoom_in 3s ease-in;
 }
 
 .header_p {
@@ -187,20 +189,24 @@ body{
 	width: 250px;
 	color: white;
 	text-align: center;
+	margin-bottom: 10px;
 }
 
-.main_page .text1 h3 {
-	font-size: 40px;
-	width: 250px;
-	text-align: center;
+.main_page h3 {
+	font-size: 25px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    transform: translateY(-15px);
+	animation: zoom_in_2 3.5s ease-in;
 }
 
-.main_page .text1 h4 {
-	font-size: 14px;
-	width: 300px;
-	text-align: center;
-	font-weight: 500;
-	margin-top: 7px;
+.main_page h4 {
+    font-size: 15px;
+    width: 300px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
 }
 
 
@@ -214,9 +220,9 @@ body{
 
 .choco {
 	position: absolute;
-	height: 181px;
-	top: 320px;
-	left: 110px;
+	height: 160px;
+	top: 345px;
+	left: 115px;
 	cursor: pointer;
 }
 
@@ -238,9 +244,48 @@ body{
 }
 
 @keyframes shake {
-	0% { transform: translate(0, 0) rotate(0deg); }
-	25% { transform: translate(5px, 5px) rotate(5deg); }
-	50% { transform: translate(0, 0) rotate(0eg); }
-	75% { transform: translate(-5px, 5px) rotate(-5deg); }
-	100% { transform: translate(0, 0) rotate(0deg); }
-  }
+	0% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+
+	25% {
+		transform: translate(5px, 5px) rotate(5deg);
+	}
+
+	50% {
+		transform: translate(0, 0) rotate(0eg);
+	}
+
+	75% {
+		transform: translate(-5px, 5px) rotate(-5deg);
+	}
+
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+}
+
+@keyframes zoom_in {
+	0%{
+		opacity: 0;
+		transform: scale(1.2);
+	}50%{
+		opacity: 1;
+		transform: translateY(0px);
+		transform: scale(1);
+	}100%{
+		transform: translateY(-25px);
+	}
+}
+@keyframes zoom_in_2 {
+	0%{
+		opacity: 0;
+		transform: scale(1.2);
+	}50%{
+		opacity: 1;
+		transform: translateY(0px);
+		transform: scale(1);
+	}100%{
+		transform: translateY(-15px);
+	}
+}

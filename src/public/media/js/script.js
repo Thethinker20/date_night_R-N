@@ -23,7 +23,7 @@ $(".choco").on("click", function(){
         header_p.style.opacity = 0;
         header_p.style.display = 'none';
     
-        main_page.style.display = 'block';
+        main_page.style.display = 'flex';
         setTimeout(() => main_page.style.opacity = 1, 100);
       }, 1000);
 });
